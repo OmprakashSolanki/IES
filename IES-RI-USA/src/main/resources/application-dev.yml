@@ -1,0 +1,101 @@
+
+ies:
+ properties:
+   message: Welcome to IES- Dev Environment
+   
+   accSuccess: Registration completed Successfully
+   accFailure: Registration Failed
+   url: http://localhost:2525/IES/accReg
+   reg_sub: IES Registration Account Details
+   regEmailFileName: Registration_Email_Template.txt
+   accActivationEmailFileName: Account_Activation_Template.txt
+   
+   accActivateEmailSubject: Your RI IES Account Activated
+   accDeActivationEmailFileName: Account_De_Activation_Template.txt
+   accDeActiveEmailSubject: Your RI IES Account De-Activated
+   
+   deActivateSuccessMsg:  Account  De-Activated Succesfully 
+   deActivateFailureMsg:  Account De-Activation Failed 
+   
+   activateSuccessMsg:  Account  Activated Succesfully 
+   activateFailureMsg:  Account Activation Failed 
+   
+   updateAccEmailFileName: Account_Updation_Template.txt
+   updateAccEmailSubject: Your RI IES Account Updated Details
+   
+   editAccSuccessMsg: Account Details Updated Successfully
+   editAccFailureMsg: Account Updation Failed
+   
+   
+   planRegSuccessMsg: Plan Created Successfully
+   planRegFailureMsg: Plan Creation failed
+   
+   planDeActivateSuccessMsg: Plan De-Activated SuccessFully
+   planDeActivateFailureMsg: Plan De-Activated Failed
+   
+   planActivateSuccessMsg: Plan Activated SuccessFully
+   planActivateFailureMsg: Plan Activation Failed
+   
+   editPlanSuccessMsg: Plan Edited Successfully
+   editPlanFailureMsg: Plan Edition Failed
+   inValidCredentials: Invalid Credentials
+   deActivatedAccountMsg: Account is DeActivated By IES Administrator
+   
+   #Ar Module messages
+   #Ar Applicant registration message
+   invalidSSNMsg: Invalide SSN Provided!!
+   unAuthorisedApplicant: "Un-Authorised Applicant to Apply for Plan"
+   applicantRegSuccess: Applicant Registered Successfully with AppId 
+   applicantAlreadyReg: Applicant Already Registered with AppId 
+   updateAppSuccessMsg: Application Updated Successfully
+   updateAppErrMsg: Application Updation Failed
+   
+   #Data Collection module Messages
+   caseCreationSuccessMsg: Case Created Successfully
+   caseCreationFailureMsg: Case Ccreation failed
+   casePlanSelectionFailureMsg: Plan Selection failed
+   incomeDetailsSavingfailureMsg: Income Details Saving Failed
+   caseChildSavingSuccessMessage: Child Record Saved Successfully
+   caseChildSavingFailureMsg: Child Record Saving Failed
+   caseEducationDetailsFailureMsg: Education Detaild Not Saved 
+   childRetrivingErrorMsg: child Retriving Failed
+   childDeleteSucessMsg: Child Details Deleted SuccessFully
+   
+   #plan Statement batch
+   planApprovalFileName: Approved_PlanDetails_Template.txt
+   planApprovalSub: Plan Approval Details
+   
+   
+# server Port number
+server:
+   port: 2525
+   
+#Jdbc Properties cfgs
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: IES_DEV
+    password: IES_DEV
+    driver-class-name: oracle.jdbc.driver.OracleDriver
+
+#Spring Hibernate Properties cfgs
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.Oracle10gDialect
+        format_sql: true
+    hibernate:
+      ddl-auto: update
+              
+    show-sql: true
+    
+#logging properties  
+logging:
+  level:
+    root: INFO
+   # org.springframework.web: ERROR
+    com.usa.ri.gov.ies: DEBUG
+   # org.hibernate: ERROR
+  file: IES-DEV-Logs.log     
+    
+       
