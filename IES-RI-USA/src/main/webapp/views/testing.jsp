@@ -12,3 +12,6 @@
 gfdajfka
 Hello first conflict
 kafdafdk
+
+line 1 added for just testing 
+Second line added for more testing
